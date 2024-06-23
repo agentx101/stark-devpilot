@@ -29,7 +29,7 @@ import { TemplateProvider } from './extension/template-provider'
 import { ServerMessage } from './common/types'
 import { FileInteractionCache } from './extension/file-interaction'
 import { getLineBreakCount } from './webview/utils'
-import { auth0Config, socialLogin, handleAuthentication } from './common/auth'
+import { auth0Config, socialLogin, handleAuthentication, initWeb3Auth } from './common/auth'
 
 export async function activate(context: ExtensionContext) {
   setContext(context)
@@ -219,7 +219,8 @@ export async function activate(context: ExtensionContext) {
 
     }),
     commands.registerCommand(DEVDOCK_COMMAND_NAME.githubConnect, () => {
-      socialLogin();
+      //initWeb3Auth()
+      socialLogin()
     }),
 
     window.registerWebviewViewProvider('devdock.sidebar', sidebarProvider),
@@ -229,7 +230,9 @@ export async function activate(context: ExtensionContext) {
   context.subscriptions.push(vscode.window.registerUriHandler({
     handleUri(uri: vscode.Uri) {
         if (uri.path === '/auth/callback') {
-            handleAuthentication(uri);
+            handleAuthentication(uri).then(() => {
+              console.log("Handle Authentication executed successfully")
+            })
         }
     }
   }))

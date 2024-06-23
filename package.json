@@ -30,6 +30,13 @@
     "url": "https://github.com/rjmacarthy/devdock"
   },
   "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "deviate/packages/snfoundry",
+      "deviate/packages/nextjs"
+    ]
+  },
   "publisher": "taran",
   "engines": {
     "vscode": "^1.84.0"
@@ -414,7 +421,19 @@
     "vscode:prepublish": "npm run package",
     "vscode:publish": "npm exec vsce publish",
     "watch-tests": "tsc -p . -w --outDir out",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "chain": "yarn @devdock/snfoundry chain",
+    "deploy": "yarn workspace @devdock/snfoundry deploy",
+    "snfoundrytest": "yarn workspace @devdock/snfoundry test",
+    "compile": "yarn workspace @devdock/snfoundry compile",
+    "start": "yarn workspace @devdock/nextjs dev",
+    "next:lint": "yarn workspace @devdock/nextjs lint",
+    "next:check-types": "yarn workspace @devdock/nextjs check-types",
+    "vercel": "yarn workspace @devdock/nextjs vercel",
+    "vercel:yolo": "yarn workspace @devdock/nextjs vercel:yolo",
+    "format": "yarn workspace @devdock/nextjs format && yarn workspace @devdock/snfoundry format",
+    "format:check": "yarn workspace @devdock/nextjs format:check && yarn workspace @devdock/snfoundry format:check",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/async-lock": "^1.4.2",
@@ -422,6 +441,7 @@
     "@types/handlebars": "^4.1.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "^16.18.68",
+    "@types/prop-types": "^15.7.12",
     "@types/react-dom": "^18.2.18",
     "@types/react-syntax-highlighter": "^15.5.11",
     "@types/string_score": "^0.1.31",
@@ -435,6 +455,7 @@
     "css-loader": "^6.8.1",
     "eslint": "^8.20.0",
     "glob": "^10.3.10",
+    "husky": "^9.0.11",
     "mocha": "^10.3.0",
     "ncp": "^2.0.0",
     "rimraf": "^5.0.5",
@@ -453,6 +474,7 @@
     "@vscode/codicons": "^0.0.35",
     "@vscode/webview-ui-toolkit": "^1.4.0",
     "@web3auth/no-modal": "^8.6.2",
+    "@web3auth/single-factor-auth": "^8.0.2",
     "@web3auth/web3auth": "^2.1.3",
     "async-lock": "^1.4.1",
     "auth0-js": "^9.26.1",

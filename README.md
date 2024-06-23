@@ -62,11 +62,3 @@ Bitcoin: `1PVavNkMmBmUz8nRYdnVXiTgXrAyaxfehj`
 ## Disclaimer
 
 Devdock is actively developed and provided "as is". Functionality may vary between updates.
-
-## Star History
-
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=rjmacarthy/devdock&type=Date&theme=dark" />
- <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=rjmacarthy/devdock&type=Date" />
- <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=rjmacarthy/devdock&type=Date" />
-</picture>

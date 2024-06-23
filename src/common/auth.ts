@@ -63,23 +63,23 @@ const handleAuthentication = (uri: vscode.Uri) => {
   }
 }
 
-const getAuthHtml = (authUrl: string): string  => {
-  return `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy" content="frame-src https://devdock.us.auth0.com/ https://us.auth0.com/ https://auth0.com/;">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Auth0 Login</title>
-    </head>
-    <body>
-        <!-- Your authentication content here -->
-        <iframe src="https://devdock.us.auth0.com/" width="100%" height="100%"></iframe>
-    </body>
-    </html>
-  `;
-}
+// const getAuthHtml = (authUrl: string): string  => {
+//   return `
+//     <!DOCTYPE html>
+//     <html lang="en">
+//     <head>
+//         <meta charset="UTF-8">
+//         <meta http-equiv="Content-Security-Policy" content="frame-src https://devdock.us.auth0.com/ https://us.auth0.com/ https://auth0.com/;">
+//         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//         <title>Auth0 Login</title>
+//     </head>
+//     <body>
+//         <!-- Your authentication content here -->
+//         <iframe src="https://devdock.us.auth0.com/" width="100%" height="100%"></iframe>
+//     </body>
+//     </html>
+//   `;
+// }
 
 export { auth0Config, socialLogin, handleAuthentication }
 

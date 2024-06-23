@@ -1,72 +1,164 @@
 # Devdock
 
-Free and private AI extension for Visual Studio Code.
+Welcome to **Devdock**, a revolutionary co-pilot VS Code extension designed to enhance your development experience and reward you for successful deployments.
 
-- [Ollama](https://github.com/jmorganca/ollama)
-- [llama.cpp](https://github.com/ggerganov/llama.cpp)
-- [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui)
-- [LM Studio](https://github.com/lmstudio-ai)
-- [LiteLLM](https://github.com/BerriAI/litellm)
-- [Open WebUI](https://github.com/open-webui/open-webui)
+## Overview
 
-## 🚀 Getting Started
+Devdock is an AI-powered extension for the VS Code workspace, tailored for the Starknet ecosystem. It offers the following functionalities:
 
-Visit the [quick start guide](https://rjmacarthy.github.io/devdock-docs/general/quick-start/) to get started.
-
-## Main Features
-
-### Fill in the Middle Code Completion
-
-Get AI-based suggestions in real time. Let Devdock autocomplete your code as you type.
-
-![Fill in the Middle Example](https://github.com/rjmacarthy/devdock/assets/5537428/69f567c0-2700-4474-b621-6099255bc87b)
-
-### Chat with AI About Your Code
-
-Discuss your code via the sidebar: get function explanations, generate tests, request refactoring, and more.
-
-<img src="https://github.com/rjmacarthy/devdock/assets/5537428/a5c5bb34-60f6-41f6-8226-c62cf4c17c1d" width="760"/>
+1. **Token Rewards**: Earn crypto tokens for every successful deployment.
+2. **Personalized AI Model**: Fine-tune a model with your code data and retain ownership.
+3. **Developmental Assistance**: Get real-time help with your development queries directly in VS Code.
 
 ### Additional Features
 
-- Operates online or offline
-- Highly customizable API endpoints for FIM and chat
-- Chat conversations are preserved
-- Conforms to the OpenAI API standard
-- Supports single or multiline fill-in-middle completions
-- Customizable prompt templates
-- Generate git commit messages from staged changes
-- Easy installation via the Visual Studio Code extensions marketplace
-- Customizable settings for API provider, model name, port number, and path
-- Compatible with Ollama, llama.cpp, oobabooga, and LM Studio APIs
-- Accepts code solutions directly in the editor
-- Creates new documents from code blocks
-- Copies generated code solution blocks
+- **LLM Connectivity**: Connect to both hosted and local Large Language Models (LLMs).
+- **Advanced Co-Pilot**: Beyond chat support, it offers in-depth solutions to development questions.
+- **Earn Crypto**: Gain STARK tokens for successful contract deployments, declarations, and compilations.
 
-## Known Issues
+### Unique Proposition
 
-Visit the GitHub [issues page](https://github.com/rjmacarthy/devdock/issues) for known problems and troubleshooting.
+Devdock is the first-of-its-kind "code to earn" AI-powered VS Code extension, specifically designed for the Starknet ecosystem. It simplifies contract deployment, integrates seamlessly with your workflow, and pays you for your successful deployments.
 
-## Contributing
+## Features
 
-Interested in contributing? Reach out on [Twitter](https://x.com/rjmacarthy), describe your changes in an issue, and submit a PR when ready. Devdock is open-source under the MIT license. See the [LICENSE](https://github.com/rjmacarthy/devdock/blob/master/LICENSE) for more details.
+1. **Web3 Authentication**: Uses Web3Auth with GitHub login for user sign-in and wallet creation.
+2. **Integrated Development Environment**: Operates within the VS Code workspace, monitoring terminal activity and file changes.
+3. **Real-Time Updates**: Tracks successful deployments, logs code content and errors to the database.
+4. **Model Improvement**: Utilizes deployment data to fine-tune models, enhancing the learning curve for new developers.
+5. **STARK Token Rewards**: Automatically allocates tokens via the smart contract's "assign" function post-deployment.
+6. **Token Management**: Developers can view and claim their earned tokens through Devdock's platform.
 
-## Support Devdock
+## Getting Started
 
-Thanks for using Devdock! 
+To start using Devdock:
 
-This project is and will always be free and open source. If you find it helpful, please consider showing your appreciation with a small donation <3
+1. **Install Dependencies**: 
+   ```bash
+   npm install
+   # or
+   yarn install
 
-Bitcoin: `1PVavNkMmBmUz8nRYdnVXiTgXrAyaxfehj`
+2.  **Start the Frontend**:
+    
+    bash
+    
+    Copy code
+    
+    `yarn start` 
+    
+    This launches the frontend platform where you can track your progress.
+    
+3.  **Run the Extension**:
+    
+    -   Navigate to the 'Run and Debug' tab in VS Code.
+    -   Start the extension.
 
-## Disclaimer
+You're all set!
 
-Devdock is actively developed and provided "as is". Functionality may vary between updates.
+## Under the Hood
 
-## Star History
+Here's a brief overview of how Devdock operates:
 
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=rjmacarthy/devdock&type=Date&theme=dark" />
- <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=rjmacarthy/devdock&type=Date" />
- <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=rjmacarthy/devdock&type=Date" />
-</picture>
+1.  **User Authentication**: Sign in via Web3Auth with your GitHub account, which also creates your wallet.
+2.  **Daily Coding Activity**: Continue your regular coding tasks within the VS Code workspace.
+3.  **Monitoring**: Devdock listens to terminal activity and file changes.
+4.  **Data Logging**: Logs successful deployments and encountered errors.
+5.  **Model Training**: Uses logged data to fine-tune models, making it easier for new developers to learn Cairo and deploy contracts.
+6.  **Token Allocation**: After a successful deployment, the smart contract's "assign" function allocates tokens to your account.
+7.  **Token Management**: View and claim your tokens on Devdock's platform.
+
+## Conclusion
+
+Devdock not only simplifies the development process but also rewards you for your efforts, making it a valuable tool for developers in the Starknet ecosystem. Let the AI handle the heavy lifting while you focus on designing state-of-the-art contracts and architectures. Happy coding and earning!
+
+
+                                    +--------------------+
+                                    |                    |
+                                    |   VS Code          |
+                                    |   Extension        |
+                                    |                    |
+                                    +---------+----------+
+                                              |
+            +---------------------------------+----------------------------------+
+            |                                 |                                  |
+    +-------v---------+               +-------v--------+                 +-------v--------+
+    |                 |               |                |                 |                |
+    |     Chat        |               | Code Completion|                 |  Web3 Login    |
+    |                 |               |                |                 |                |
+    +-------+---------+               +-------+--------+                 +-------+--------+
+            |                                 |                                  |
+            |                                 |                                  |
+  +---------v------------+         +----------v-------------+        +-----------v------------+
+  |                      |         |                        |        |                        |
+  |  OpenAI              |         | Ollama API/Codestral   |        |   Web3 OAuth           |
+  |                      |         |                        |        |                        |
+  +----------+-----------+         +-----------+------------+        +------------+-----------+
+             |                                   |                                  |
+  +----------v-----------+         +-------------v----------+        +-------------v----------+
+  |                      |         |                        |        |                        |
+  |  Backend Devdock API |         |   Backend Devdock API  |        |   GitHub Login         |
+  |                      |         |                        |        |                        |
+  +----------------------+         +------------------------+        +-------------+----------+
+                                                                                  |
+                                                                                  |
+                                                                          +-------v--------+
+                                                                          |                |
+                                                                          | Starknet Wallet|
+                                                                          |     Connect    |
+                                                                          |                |
+                                                                          +-------+--------+
+                                                                                  |
+                                                                                  |
+  +---------------------+                                                        |
+  |                     |                                                        |
+  |  Terminal Output    +--------------------------------------------------------+
+  |   Monitoring        |                                                        |
+  +---------------------+                                                        |
+                                                                                  |
+                                                                                  |
+  +---------------------+                                                        |
+  |                     |                                                        |
+  |   Data Logging      |                                                        |
+  |                     |                                                        |
+  +---------------------+                                                        |
+                                                                                  |
+                                                                                  |
+                                                                          +-------v--------+
+                                                                          |                |
+                                                                          |  Create        |
+                                                                          |  Contracts     |
+                                                                          |                |
+                                                                          +-------+--------+
+                                                                                  |
+                                                                                  |
+  +---------------------+                                                        |
+  |                     |                                                        |
+  | Trainer Wallet Addr +--------------------------------------------------------+
+  |                     |
+  +---------------------+
+            |
+  +---------v----------+
+  |                    |
+  |  Backend           |
+  |                    |
+  +--------------------+
+            |
+  +---------v----------+
+  |                    |
+  |  Smart Contracts   |
+  |  and Token Rewards |
+  |                    |
+  +---------+----------+
+            |
+  +---------v----------+
+  |                    |
+  |  Assign Function   |
+  |                    |
+  +---------+----------+
+            |
+  +---------v----------+
+  |                    |
+  |  STARK Tokens      |
+  |                    |
+  +--------------------+

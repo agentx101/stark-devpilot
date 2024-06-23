@@ -1,4 +1,5 @@
 {
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
     "module": "CommonJS",
     "esModuleInterop": true,
@@ -8,7 +9,8 @@
     "baseUrl": "./",
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
-    }
+    },
+    "composite": true
   },
   "include": ["scripts-ts/**/*"]
 }

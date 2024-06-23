@@ -5,12 +5,20 @@
 		"lib": ["es6", "dom"],
     	"jsx": "react",
 		"sourceMap": true,
-		"rootDir": "src",
+		"rootDir": ".",
 		"strict": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUnusedParameters": true,
     	"esModuleInterop": true
 	},
-  "exclude": ["node_modules", ".vscode-test"]
+  "exclude": ["node_modules", ".vscode-test"],
+  "references": [
+    {
+      "path": "./deviate/packages/nextjs/tsconfig.json"
+    },
+	{
+		"path": "./deviate/packages/nextjs/tsconfig.json"
+	}
+  ]
 }

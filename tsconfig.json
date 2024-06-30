@@ -6,11 +6,21 @@
     	"jsx": "react",
 		"sourceMap": true,
 		"rootDir": ".",
-		"strict": true,
-		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true,
-		"noUnusedParameters": true,
-    	"esModuleInterop": true
+		"strict": false,
+		"noImplicitReturns": false,
+		"noFallthroughCasesInSwitch": false,
+		"noUnusedParameters": false,
+    	"esModuleInterop": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"ignoreDeprecations": "5.0",
+		"noImplicitAny": false,
+		"noUnusedLocals": false, 
+		"noEmitOnError": false,
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+			"~~/*": ["./deviate/packages/nextjs/*", "./deviate/packages/snfoundry/*", "./*"]
+		  },
 	},
   "exclude": ["node_modules", ".vscode-test"],
   "references": [

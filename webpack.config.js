@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 //@ts-check
 
-'use strict'
+// 'use strict'
 
 const path = require('path')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
@@ -22,7 +22,7 @@ const extensionConfig = {
     libraryTarget: 'commonjs2'
   },
   externals: {
-    vscode: 'commonjs vscode',
+    vscode: 'commonjs vscode'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
